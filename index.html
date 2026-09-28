@@ -5,8 +5,22 @@
     <title>Document</title>
   </head>
   <body>
+    <input type="text" placeholder="username" id="name" /> <br />
+    <br />
+    <input type="email" placeholder="email" id="email" /> <br />
+    <br />
+    <input type="password" placeholder="password" id="pass" />
+    <button id="button">sign</button>
+    <p id="printer"></p>
     <script>
-      console.log("hello");
+      const button = document.getElementById("button");
+      button.addEventListener("click", function () {
+        let user = document.getElementById("name");
+        let username = user.value;
+        console.log(user.value);
+        let p = document.getElementById("printer");
+        p.textContent = "the username is " + user.value;
+      });
     </script>
   </body>
 </html>
