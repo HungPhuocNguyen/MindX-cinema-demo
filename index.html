@@ -17,9 +17,14 @@
       button.addEventListener("click", function () {
         let user = document.getElementById("name");
         let username = user.value;
-        console.log(user.value);
         let p = document.getElementById("printer");
-        p.textContent = "the username is " + user.value;
+        console.log(username.length);
+        if (username.length < 6) {
+          p.innerHTML = "the username must have more than 6 characters";
+          p.style.color = "Red";
+        } else {
+          p.innerHTML = "the username is " + username;
+        }
       });
     </script>
   </body>
